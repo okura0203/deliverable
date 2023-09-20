@@ -3,12 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-<<<<<<< HEAD
-
-class PostController extends Controller
-{
-    //
-=======
 use App\Models\Post;
 
 class PostController extends Controller
@@ -17,5 +11,4 @@ class PostController extends Controller
     {
         return view('posts/index')->with(['posts' => $post->getByLimit()]);//$postの中身を戻り値にする。
     }
->>>>>>> origin/master
 }
