@@ -30,6 +30,9 @@
         font-size: 16px;
         font-weight: bold;
         }
+        ul.gnav-navi-1 li:hover{
+        background: #FF7F50;
+        }
     </style>
     
     
