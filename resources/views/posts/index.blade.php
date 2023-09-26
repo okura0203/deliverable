@@ -6,11 +6,24 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./blog/laymana/resources/css/style.css">
+        <link rel="stylesheet" href="../../css/style.css">
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
+            <!--ここからメニュー-->
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="#">ログイン</a>
+                    </li>
+                    <li>
+                        <a href="#">設定</a>
+                    </li>
+                </ul>
+            </div>
+            <!--ここまでメニュー-->
         </div>
+        
     </head>    
 
     <body class="antialiased">
@@ -20,9 +33,9 @@
             <ul class="gnav-navi-1">
             <li><a href="#">Home<br>ホーム</a></li>
             <li><a href="#">SERVICE<br>サービスについて</a></li>
-            <li><a href="#">INFORMATION<br>お知らせ</a></li>
+            <li><a href="#">INFORMATION<br>探し物</a></li>
             <li><a href="#">BLOG<br>ブログ</a></li>
-            <li><a href="#">CONTACT<br>お問合せ</a></li>
+            <li><a href="#">CONTACT<br>新規登録</a></li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -59,7 +72,7 @@
         
         #ビックイメージ
         <div class="container-fluid img-hidden">
-            <img src="image/a.jpg" class="img-fulied">
+            <img src="picture.jpg" class="img-fulied">
         </div>
         <style>
             div.img-hidden {
@@ -113,6 +126,6 @@
             @endforeach
         </div>
         #フッダー
-        <footer class=”footer”>© 2018 Bootstrap test</footer>
+        <footer class=”footer”>© 2023 Deliverables</footer>
     </body>
 </html>
