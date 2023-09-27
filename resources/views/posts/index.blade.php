@@ -75,7 +75,7 @@
         
         #ビックイメージ
         <div class="container-fluid img-hidden" id="bigimage">
-            <img src="picture.jpg" class="img-fulied">
+            <img src="picture.jpg" class="img-fulied w-100">
         </div>
         <style>
             #bigimage {
