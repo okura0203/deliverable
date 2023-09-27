@@ -6,7 +6,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="public/style.css">
+        <link rel="stylesheet"href="{{ secure_asset('css/style.css') }}">
+       
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
@@ -23,7 +24,9 @@
             </div>
             <!--ここまでメニュー-->
         </div>
-        
+        <style>
+            
+        </style>
     </head>    
 
     <body class="antialiased">
@@ -71,18 +74,18 @@
         </style>
         
         #ビックイメージ
-        <div class="container-fluid img-hidden">
+        <div class="container-fluid img-hidden" id="bigimage">
             <img src="picture.jpg" class="img-fulied">
         </div>
         <style>
-            div.img-hidden {
+            #bigimage {
             height: 300px;
             overflow: hidden;
             }
         </style>
         
         #カード
-        <div class="container container-m">
+        <div class="container container-m" id="card">
         <div class="card-deck">
           <div class="card">
            <div class="card-body">
@@ -110,7 +113,7 @@
         </div>
         </div>
         <style>
-            div.container-m {
+            #card {
             margin-top: 80px;
             }
         </style>
