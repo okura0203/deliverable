@@ -7,7 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet"href="{{ secure_asset('css/style.css') }}">
-       
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
         <div class="hamburger-menu">
             <input type="checkbox" id="menu-btn-check">
             <label for="menu-btn-check" class="menu-btn"><span></span></label>
@@ -38,7 +38,7 @@
             <li><a href="#">SERVICE<br>サービスについて</a></li>
             <li><a href="#">INFORMATION<br>探し物</a></li>
             <li><a href="#">BLOG<br>ブログ</a></li>
-            <li><a href="#">CONTACT<br>新規登録</a></li>
+            <li><a href="#">CONTACT<br>ログイン/新規登録</a></li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -72,51 +72,17 @@
             background: #00BFFF;
             }
         </style>
-        
-        #ビックイメージ
         <div class="container-fluid img-hidden" id="bigimage">
-            <img src="picture.jpg" class="img-fulied w-100">
+            <img src="{{ asset('img/picture.jpg' )}}" class="img-fulied w-100">
         </div>
         <style>
             #bigimage {
-            height: 300px;
-            overflow: hidden;
+            height: auto;
+            width: 100%;
             }
         </style>
         
-        #カード
-        <div class="container container-m" id="card">
-        <div class="card-deck">
-          <div class="card">
-           <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src=".../100px200/" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-          <div class="card">
-            <img class="card-img-top" src=".../100px200/" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
-        </div>
-        <style>
-            #card {
-            margin-top: 80px;
-            }
-        </style>
+       
         
         
         
