@@ -28,7 +28,7 @@
             
         </style>
     </head>    
-
+    
     <body class="antialiased">
         <h1>LayMana</h1>
         #ナビゲーション
@@ -38,7 +38,19 @@
             <li><a href="#">SERVICE<br>サービスについて</a></li>
             <li><a href="#">INFORMATION<br>探し物</a></li>
             <li><a href="#">BLOG<br>ブログ</a></li>
-            <li><a href="#">CONTACT<br>ログイン/新規登録</a></li>
+            <li><a href="dashboard">CONTACT<br>ログイン/新規登録</a>
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    @auth
+                        <a href="{{ url('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"></a>
+                    @else
+                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+    
+                    @if (Route::has('register'))
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                    @endif
+                    @endauth
+                </div>
+            </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
