@@ -1,6 +1,16 @@
 <x-guest-layout>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
+    
+        <div class="container-fluid img-hidden" id="background">
+            <img src="{{ asset('img/search.jpg' )}}" class="img-fulied w-100">
+        </div>
+        <style>
+            background{
+            background-image: url(img/search.jpg);
+            background-repeat: repeat-x;
+            }
+        </style>
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
@@ -43,5 +53,6 @@
                 {{ __('Log in') }}
             </x-primary-button>
         </div>
+        
     </form>
 </x-guest-layout>
