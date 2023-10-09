@@ -12,3 +12,4 @@ class PostController extends Controller
         return view('posts/index')->with(['posts' => $post->getByLimit()]);//$postの中身を戻り値にする。
     }
 }
+
