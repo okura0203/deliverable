@@ -23,7 +23,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/search', function() {
-    return view('search');
+    return view('search.search');
 })->middleware(['auth', 'verified'])->name('search');
 
 Route::middleware('auth')->group(function () {
