@@ -34,7 +34,10 @@
         #ナビゲーション
         <nav>
             <ul class="gnav-navi-1">
-            <li><a href="#">Home<br>ホーム</a></li>
+            <li><a href="home">Home<br>ホーム</a></li>
+                <div>
+                    <a href="/home"></a>
+                </div>
             <li><a href="#">SERVICE<br>サービスについて</a></li>
             <li><a href="search">INFORMATION<br>探し物</a></li>
                 <div>

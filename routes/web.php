@@ -26,6 +26,8 @@ Route::get('/search', function() {
     return view('search.search');
 })->middleware(['auth', 'verified'])->name('search');
 
+Route::get('/home', [PostController::class, 'index']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
