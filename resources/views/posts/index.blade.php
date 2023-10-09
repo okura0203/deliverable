@@ -38,7 +38,7 @@
             <li><a href="#">SERVICE<br>サービスについて</a></li>
             <li><a href="search">INFORMATION<br>探し物</a></li>
                 <div>
-                    <a href="{{ url('/laymana/resources/views/layouts/search.blade.php') }}" id="search" ></a>
+                    <a href="/search" ></a>
                 </div>
             <li><a href="#">BLOG<br>ブログ</a></li>
             <li><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
