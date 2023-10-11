@@ -37,10 +37,6 @@
                 </div>
             </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </nav>
         <style>
             *{box-sizing: border-box;}
@@ -69,9 +65,52 @@
             background: #00BFFF;
             }
         </style>
+        
         <form action="/" method="get">
-            <input type="search" name="search" placeholder="キーワードを入力”>
-            <input type="submit" name="submit" value="検索”>
+            <div style="text-align:center">
+                <input type="search" name="search" placeholder="キーワードを入力">
+                <input type="submit" name="submit" value="検索">
+            </div>
         </form>
+        
+        <div class="button">
+	        <a href="/entry">探し物登録</a>
+        </div>
+        <style>
+            .button a {
+                position: relative;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 auto;
+                max-width: 240px;
+                padding: 10px 25px;
+                color: #313131;
+                transition: 0.3s ease-in-out;
+                font-weight: 600;
+                background: #eee;
+                overflow:hidden;
+            }
+            .button a:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 150%;
+                height: 500%;
+                content: "";
+                -webkit-transition: all 0.5s ease-in-out;
+                transition: all 0.5s ease-in-out;
+                -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                transform: translateX(-98%) translateY(-25%) rotate(45deg);
+                background: #6bb6ff;
+                opacity: 0.2;
+            }
+            .button a:hover:before {
+                -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+                transform: translateX(-9%) translateY(-25%) rotate(45deg);
+            }
+        </style>
+        #フッダー
+        <footer class=”footer”>© 2023 Deliverables</footer>
     </body>
 </html>

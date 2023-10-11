@@ -28,6 +28,10 @@ Route::get('/search', function() {
 
 Route::get('/home', [PostController::class, 'index']);
 
+Route::get('/entry', function() {
+    return view('entry.entry');
+})->middleware(['auth', 'verified'])->name('entry');
+
 Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
