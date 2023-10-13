@@ -11,19 +11,19 @@
         
     </head>
     <body class="antialiased">
-         <nav>
+        <nav>
             <ul class="gnav-navi-1">
-            <li><a href="home">Home<br>ホーム</a></li>
+            <li class="flex-item1" ><a href="home">Home<br>ホーム</a></li>
                 <div>
                     <a href="/home"></a>
                 </div>
-            <li><a href="#">SERVICE<br>サービスについて</a></li>
-            <li><a href="search">INFORMATION<br>探し物</a></li>
+            <li class="flex-item1"><a href="#">SERVICE<br>サービスについて</a></li>
+            <li class="flex-item1"><a href="search">INFORMATION<br>探し物</a></li>
                 <div>
                     <a href="/search" ></a>
                 </div>
-            <li><a href="#">BLOG<br>ブログ</a></li>
-            <li><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
+            <li class="flex-item1"><a href="#">BLOG<br>ブログ</a></li>
+            <li class="flex-item1" ><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"></a>
@@ -37,6 +37,10 @@
                 </div>
             </li>
             </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
         </nav>
         <style>
             *{box-sizing: border-box;}
@@ -45,14 +49,17 @@
             background: #1159a2;
             padding: 0;
             text-align: center;
+            display: flex;
             }
             ul.gnav-navi-1 li{
-            display: inline-block;
-            }
             
+            }
+            .flex-item1 {
+                flex-basis: 1000px; /* flexアイテムの幅を自動で調整 */
+                }
             
             ul.gnav-navi-1 li a{
-            display: block;
+            
             padding: 1em;
             color: #e2f0fd;
             text-decoration: none;
@@ -65,24 +72,16 @@
             background: #00BFFF;
             }
         </style>
-        
-        <form action="/" method="get">
-            <div style="text-align:center">
-                <input type="search" name="search" placeholder="キーワードを入力">
-                <input type="submit" name="submit" value="検索">
-            </div>
-        </form>
-        
-        <div class="button">
-	        <a href="/entry">探し物登録</a>
+        <div class="button011">
+        	<a href="entry">探し物の登録</a>
         </div>
         <style>
-            .button a {
+            .button011 a {
                 position: relative;
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                margin: 0 auto;
+                margin-left: 80%;
                 max-width: 240px;
                 padding: 10px 25px;
                 color: #313131;
@@ -91,7 +90,7 @@
                 background: #eee;
                 overflow:hidden;
             }
-            .button a:before {
+            .button011 a:before {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -105,7 +104,7 @@
                 background: #6bb6ff;
                 opacity: 0.2;
             }
-            .button a:hover:before {
+            .button011 a:hover:before {
                 -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
                 transform: translateX(-9%) translateY(-25%) rotate(45deg);
             }
