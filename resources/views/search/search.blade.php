@@ -82,7 +82,7 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                margin: 0 auto;
+                margin-left: 80%;
                 max-width: 240px;
                 padding: 10px 25px;
                 color: #313131;
