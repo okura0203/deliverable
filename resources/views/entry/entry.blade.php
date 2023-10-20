@@ -30,6 +30,12 @@
             </div>
             <!-- ここまで追加 -->
             <input type="submit" value="store"/>
+            
+            @if($post->image_url)
+            <div>
+                <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+            </div>
+            @endif
         </form>
         <div class="footer">
             <a href="/">戻る</a>
