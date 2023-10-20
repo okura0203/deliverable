@@ -20,13 +20,19 @@ class PostController extends Controller
 
     public function store(Request $request, Post $post)
     {
-        //cloudinaryへ画像を送信し、画像のURLを$image_urlに代入している
-        $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
-        dd($image_url);  //画像のURLを画面に表示
-
+        //cloudinaryへ画像を送信し、
         $input = $request['post'];
+        if($request->file('image')){ //画像ファイルが送られた時だけ処理が実行される
+            $image_url = Cloudinary::upload($request->file('image')->getRealPath())->getSecurePath();
+            $input += ['image_url' => $image_url];
+        }
         $post->fill($input)->save();
         return redirect('/posts/' . $post->id);
+    }
+    
+    public function show(Post $post)
+    {
+        return view('/posts/show')->with(['post' => $post]);
     }
 }
 
