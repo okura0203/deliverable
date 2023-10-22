@@ -109,7 +109,14 @@
                 -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
                 transform: translateX(-9%) translateY(-25%) rotate(45deg);
             }
+            
+            
         </style>
+        @if($post->image_url)
+            <div>
+                <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+            </div>
+        @endif
         #フッダー
         <footer class=”footer”>© 2023 Deliverables</footer>
     </body>
