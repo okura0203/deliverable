@@ -66,12 +66,34 @@
             }
         </style>
         
-        <form action="/" method="get">
-            <div style="text-align:center">
-                <input type="search" name="search" placeholder="キーワードを入力">
-                <input type="submit" name="submit" value="検索">
+        
+        <form method="GET" action="{{ route('users.index') }}">
+            <input type="search" placeholder="ユーザー名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+            <div>
+                <button type="submit">検索</button>
+                <button>
+                    <a href="{{ route('users.index') }}" class="text-white">
+                        クリア
+                    </a>
+                </button>
             </div>
         </form>
+        @if($post->image_url)
+            <div>
+                <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
+            </div>
+        @endif
+        @foreach($posts as $post)
+            <a href="{{ route('users.show', ['user_id' => $post->id]) }}">
+                {{ $post->name }}
+            </a>
+        @endforeach
+        
+        
+        <div>
+        　// 下記のようにページネーターを記述するとページネートで次ページに遷移しても、検索結果を保持する
+            {{ $institutions->appends(request()->input())->links() }}
+        </div>
         
         <div class="button">
 	        <a href="/entry">探し物登録</a>
@@ -112,11 +134,7 @@
             
             
         </style>
-        @if($post->image_url)
-            <div>
-                <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
-            </div>
-        @endif
+        
         #フッダー
         <footer class=”footer”>© 2023 Deliverables</footer>
     </body>
