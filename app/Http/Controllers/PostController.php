@@ -16,7 +16,6 @@ class PostController extends Controller
         $users = User::paginate(20);
         $search=$request->input('search');
         $query = User::query();
-
        // もし検索フォームにキーワードが入力されたら
         if ($search) {
 
@@ -41,6 +40,7 @@ class PostController extends Controller
                 'users' => $users,
                 'search' => $search,
             ]);
+        
     }
     
     
