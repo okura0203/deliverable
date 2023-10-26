@@ -67,7 +67,7 @@
         </style>
         
         
-        <form method="GET" action="{{ route('users.index') }}">
+        <form method="POST" action="{{ route('users.index') }}">
             <input type="search" placeholder="ユーザー名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
             <div>
                 <button type="submit">検索</button>
