@@ -23,10 +23,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/search', function() {
-    return view('search.search');
-})->middleware(['auth', 'verified'])->name('search');
-
 Route::get('/home', [PostController::class, 'index']);
 
 Route::get('/entry', function() {
@@ -35,6 +31,7 @@ Route::get('/entry', function() {
 
 Route::middleware('auth')->group(function () {
     Route::get('/', [PostController::class, 'index']);
+    Route::get('/search', [PostController::class, 'search'])->name('search');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -45,4 +42,4 @@ require __DIR__.'/auth.php';
 Route::get('/posts/create', [PostController::class, 'create']);  //投稿フォームの表示
 Route::post('/posts', [PostController::class, 'store']);  //画像を含めた投稿の保存処理
 Route::get('/posts/{post}', [PostController::class, 'show']); //投稿詳細画面の表示
-Route::get('/users/index', [PostController::class, 'index'])->name('users.index');
+//Route::get('/users/index', [PostController::class, 'index'])->name('users.index');
