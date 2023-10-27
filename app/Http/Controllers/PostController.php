@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Cloudinary;  //use宣言するのを忘れずに
+use App\Models\User;
 
 class PostController extends Controller
 {
@@ -35,10 +36,11 @@ class PostController extends Controller
         }
 
         // ビューにusersとsearchを変数として渡す
-        return view('users.index')
+        return view('search')
             ->with([
                 'users' => $users,
                 'search' => $search,
+                'post' => $post,
             ]);
         
     }
