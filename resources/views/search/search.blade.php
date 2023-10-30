@@ -13,6 +13,7 @@
     <body class="antialiased">
         <nav>
             <ul class="gnav-navi-1">
+<<<<<<< HEAD
             <li class="flex-item1" ><a href="home">Home<br>ホーム</a></li>
                 <div>
                     <a href="/home"></a>
@@ -24,6 +25,13 @@
                 </div>
             <li class="flex-item1"><a href="#">BLOG<br>ブログ</a></li>
             <li class="flex-item1" ><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
+=======
+            <li><a href="home">Home<br>ホーム</a></li>
+            <li><a href="#">SERVICE<br>サービスについて</a></li>
+            <li><a href="search">INFORMATION<br>探し物</a></li>
+            <li><a href="#">BLOG<br>ブログ</a></li>
+            <li><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
+>>>>>>> origin/master
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"></a>
@@ -78,33 +86,30 @@
 =======
         
         
-        <form method="POST" action="{{ route('users.index') }}">
-            <input type="search" placeholder="ユーザー名を入力" name="search" value="@if (isset($search)) {{ $search }} @endif">
+        <form method="GET" action="{{ route('search') }}">
+            <input type="search" placeholder="ユーザー名を入力" name="keyword" value="@if (isset($search)) {{ $search }} @endif">
             <div>
                 <button type="submit">検索</button>
                 <button>
-                    <a href="{{ route('users.index') }}" class="text-white">
+                    <a href="{{ route('search') }}" class="text-white">
                         クリア
                     </a>
                 </button>
             </div>
         </form>
-        @if($post->image_url)
-            <div>
-                <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
-            </div>
-        @endif
-        @foreach($posts as $post)
-            <a href="{{ route('users.show', ['user_id' => $post->id]) }}">
-                {{ $post->name }}
-            </a>
-        @endforeach
         
-        
-        <div>
-        　// 下記のようにページネーターを記述するとページネートで次ページに遷移しても、検索結果を保持する
-            {{ $institutions->appends(request()->input())->links() }}
+        <div class='posts'>
+            @foreach ($posts as $post)
+                <div class='post'>
+                    <h2 class='title'>{{ $post->title }}</h2>
+                    <p class='body'>{{ $post->body }}</p>
+                    <img src="{{ $post->image_url }}" >
+                </div>
+            @endforeach
         </div>
+        
+        
+        
         
         <div class="button">
 	        <a href="/entry">探し物登録</a>

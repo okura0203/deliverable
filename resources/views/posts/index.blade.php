@@ -34,6 +34,7 @@
         #ナビゲーション
         <nav>
             <ul class="gnav-navi-1">
+<<<<<<< HEAD
             <li class="flex-item1" ><a href="home">Home<br>ホーム</a></li>
                 <div>
                     <a href="/home"></a>
@@ -45,6 +46,13 @@
                 </div>
             <li class="flex-item1"><a href="#">BLOG<br>ブログ</a></li>
             <li class="flex-item1" ><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
+=======
+            <li><a href="home">Home<br>ホーム</a></li>
+            <li><a href="#">SERVICE<br>サービスについて</a></li>
+            <li><a href="/search">INFORMATION<br>探し物</a></li>
+            <li><a href="#">BLOG<br>ブログ</a></li>
+            <li><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
+>>>>>>> origin/master
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"></a>
@@ -104,17 +112,6 @@
         </style>
         
        
-        
-        
-        
-        <div class='posts'>
-            @foreach ($posts as $post)
-                <div class='post'>
-                    <h2 class='title'>{{ $post->title }}</h2>
-                    <p class='body'>{{ $post->body }}</p>
-                </div>
-            @endforeach
-        </div>
         #フッダー
         <footer class=”footer”>© 2023 Deliverables</footer>
     </body>
