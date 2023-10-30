@@ -60,6 +60,9 @@
             }
         </style>
         
+        <div class="button">
+	        <a href="/entry">探し物登録</a>
+        </div>
         
         <form method="GET" action="{{ route('search') }}">
             <input type="search" placeholder="ユーザー名を入力" name="keyword" value="@if (isset($search)) {{ $search }} @endif">
@@ -86,9 +89,7 @@
         
         
         
-        <div class="button">
-	        <a href="/entry">探し物登録</a>
-        </div>
+        
         <style>
             .button a {
                 position: relative;
