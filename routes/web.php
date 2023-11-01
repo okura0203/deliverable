@@ -41,17 +41,8 @@ require __DIR__.'/auth.php';
 
 Route::get('/posts/create', [PostController::class, 'create']);  //投稿フォームの表示
 Route::post('/posts', [PostController::class, 'store']);  //画像を含めた投稿の保存処理
-<<<<<<< HEAD
 Route::get('/posts/{post}', [PostController::class, 'show']); //投稿詳細画面の表示
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 Route::get('/posts/{post}', [PostController::class, 'show']); //投稿詳細画面の表示
 Route::get('users.index', [PostController::class, 'index'])->name('users.index');
->>>>>>> origin/master
-=======
 Route::get('/users/index', [PostController::class, 'index'])->name('users.index');
->>>>>>> origin/master
-=======
 //Route::get('/users/index', [PostController::class, 'index'])->name('users.index');
->>>>>>> origin/master
