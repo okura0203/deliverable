@@ -31,7 +31,6 @@
             <!-- ここまで追加 -->
             <input type="submit" value="store"/>
             
-           
         </form>
         <div class="footer">
             <a href="/">戻る</a>
