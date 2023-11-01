@@ -61,7 +61,12 @@ class PostController extends Controller
             $input += ['image_url' => $image_url];
         }
         $post->fill($input)->save();
-        return redirect('/posts/' . $post->id);
+        return view('search.search')->with(['posts' => $post->get()]);
+    }
+    
+    public function show()
+    {
+        
     }
     
    

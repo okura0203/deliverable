@@ -85,6 +85,9 @@
         	<a href="entry">探し物の登録</a>
 =======
         
+        <div class="button">
+	        <a href="/entry">探し物登録</a>
+        </div>
         
         <form method="GET" action="{{ route('search') }}">
             <input type="search" placeholder="ユーザー名を入力" name="keyword" value="@if (isset($search)) {{ $search }} @endif">
@@ -111,10 +114,14 @@
         
         
         
+<<<<<<< HEAD
         <div class="button">
 	        <a href="/entry">探し物登録</a>
 >>>>>>> origin/master
         </div>
+=======
+        
+>>>>>>> origin/master
         <style>
             .button011 a {
                 position: relative;
