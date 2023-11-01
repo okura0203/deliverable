@@ -13,25 +13,12 @@
     <body class="antialiased">
         <nav>
             <ul class="gnav-navi-1">
-<<<<<<< HEAD
-            <li class="flex-item1" ><a href="home">Home<br>ホーム</a></li>
-                <div>
-                    <a href="/home"></a>
-                </div>
-            <li class="flex-item1"><a href="#">SERVICE<br>サービスについて</a></li>
-            <li class="flex-item1"><a href="search">INFORMATION<br>探し物</a></li>
-                <div>
-                    <a href="/search" ></a>
-                </div>
-            <li class="flex-item1"><a href="#">BLOG<br>ブログ</a></li>
-            <li class="flex-item1" ><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
-=======
+
             <li><a href="home">Home<br>ホーム</a></li>
             <li><a href="#">SERVICE<br>サービスについて</a></li>
             <li><a href="search">INFORMATION<br>探し物</a></li>
             <li><a href="#">BLOG<br>ブログ</a></li>
             <li><a href="dashboard">CONTACT<br>ログイン/ログアウト/新規登録</a>
->>>>>>> origin/master
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline"></a>
@@ -45,10 +32,7 @@
                 </div>
             </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
         </nav>
         <style>
             *{box-sizing: border-box;}
@@ -80,17 +64,13 @@
             background: #00BFFF;
             }
         </style>
-<<<<<<< HEAD
-        <div class="button011">
-        	<a href="entry">探し物の登録</a>
-=======
         
         <div class="button">
 	        <a href="/entry">探し物登録</a>
         </div>
         
         <form method="GET" action="{{ route('search') }}">
-            <input type="search" placeholder="ユーザー名を入力" name="keyword" value="@if (isset($search)) {{ $search }} @endif">
+            <input type="search" placeholder="キーワード入力" name="keyword" value="@if (isset($search)) {{ $search }} @endif">
             <div>
                 <button type="submit">検索</button>
                 <button>
@@ -111,17 +91,6 @@
             @endforeach
         </div>
         
-        
-        
-        
-<<<<<<< HEAD
-        <div class="button">
-	        <a href="/entry">探し物登録</a>
->>>>>>> origin/master
-        </div>
-=======
-        
->>>>>>> origin/master
         <style>
             .button011 a {
                 position: relative;
@@ -158,15 +127,12 @@
             
             
         </style>
-<<<<<<< HEAD
         @if($post->image_url)
             <div>
                 <img src="{{ $post->image_url }}" alt="画像が読み込めません。"/>
             </div>
         @endif
-=======
         
->>>>>>> origin/master
         #フッダー
         <footer class=”footer”>© 2023 Deliverables</footer>
     </body>

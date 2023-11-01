@@ -24,10 +24,6 @@ class PostController extends Controller
         
     }
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
     public function search(Request $request, Post $post)
     {
         $keyword = $request->input('keyword');
@@ -44,9 +40,6 @@ class PostController extends Controller
         return view('search.search')->with(['posts' => $posts]);
     }
     
->>>>>>> origin/master
-    
->>>>>>> origin/master
     public function create()
     {
         return view('/posts/create');  //create.blade.phpを表示
